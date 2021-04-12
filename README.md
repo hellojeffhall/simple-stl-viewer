@@ -5,7 +5,7 @@ This library tries to make it as easy as possible to set up an STL viewer on you
 To keep things as simple as possible, customization options are very limited for now. New options may be added over time.
 
 # Example
-[Here is an example]((https://musing-minsky-a534d2.netlify.app)) of a page with the STL viewer. Note that the STL file is large so it may take a while to load!
+[Here is an example](https://musing-minsky-a534d2.netlify.app) of a page with the STL viewer. Note that the STL file is large so it may take a while to load!
 
 # Usage
 
@@ -14,7 +14,7 @@ To keep things as simple as possible, customization options are very limited for
 ## Setting up your HTML
 To use this library, in your HTML, you will need to create a "placeholder" `<div>` for each STL viewer that you want to render. The placeholder should look like this:
 ```HTML
-
+<div data-stl-url='path/to/your/file.stl'></div>
 ```
 If you want to specify a hex color for your STL object, you can do so with the `color` property.
 ```
