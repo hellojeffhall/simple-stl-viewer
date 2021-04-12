@@ -1,0 +1,33 @@
+{
+  "name": "stlviewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bundle.js",
+  "directories": {
+    "lib": "src"
+  },
+  "scripts": {
+    "build": "./node_modules/webpack-cli/bin/cli.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "exports-loader": "^2.0.0",
+    "imports-loader": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.1",
+    "style-loader": "^2.0.0",
+    "three": "^0.127.0",
+    "three-orbit-controls": "^82.1.0",
+    "three-stl-loader": "^1.0.6",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

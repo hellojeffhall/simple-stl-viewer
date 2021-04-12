@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<style>
+			[data-stl-url] {
+				height: 500px;
+				width: 501px;
+			}
+			/*
+				The CSS below is just to format this example page.
+				You don't need it for the STL viewer.
+			*/
+			body {
+				background-color: #f0f3f6;
+			}
+			.center {
+				display: flex;
+				justify-content: center;
+			}
+			pre {
+				background-color: rgb(55, 85, 150);
+				color: white;
+				font-family: monospace;
+				font-size: 16px;
+				border: 1px solid black;
+				box-shadow: 1px 1px 1px 1px #dcd5d5;
+				padding: 10px;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<code><pre></pre></code>
+		<div class='center'>
+			<div data-stl-url='./assets/dizang.stl'></div>
+		</div>
+		<script src="../dist/bundle.js"></script>
+		<script>
+			// This script is just to format the code block.
+			// You don't need this for the STL Viewer.
+			var exampleHtml = [
+				"<html>",
+				"  <head>",
+				"    <style>",
+				"",
+				"      /* Set the height and width for the STL viewer */",
+				"      [data-stl-url] {",
+				"        height: 500px;",
+				"        width: 750px;",
+				"      }",
+				"",
+				"    </style>",
+				"  </head>",
+				"  <body>", 
+				"",
+				"    <!-- Set up the STL viewer placeholder.-->",
+				"    <div data-stl-url='./assets/dizang.stl'></div>", 
+				"",
+				"    <!-- Call the script below all your STL viewer placeholders. -->",
+				"    <script src='../dist/bundle.js'/>", 
+				"",
+				"  </body>",
+				"</html>" 
+			].join('\n');
+
+			function escapeHtml(unsafe) {
+				return unsafe
+					.replace(/&/g, "&amp;")
+					.replace(/</g, "&lt;")
+					.replace(/>/g, "&gt;")
+					.replace(/"/g, "&quot;")
+					.replace(/'/g, "&#039;");
+			}
+				document.querySelector("pre").innerHTML = escapeHtml(exampleHtml);
+		</script>
+	</body>
+</html>
