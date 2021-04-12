@@ -17,7 +17,7 @@ To use this library, in your HTML, you will need to create a "placeholder" `<div
 <div data-stl-url='path/to/your/file.stl'></div>
 ```
 If you want to specify a hex color for your STL object, you can do so with the `color` property.
-```
+```HTML
 <div color="#5A7A7C" data-stl-url='path/to/your/file.stl'></div>
 ```
 (Make sure your hex color starts with a `#`!)
