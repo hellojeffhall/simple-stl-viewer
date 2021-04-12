@@ -8,6 +8,11 @@ To keep things as simple as possible, customization options are very limited for
 
 (See the [live demo](https://simple-stl-viewer-demo.netlify.app) for a fully coded example.)
 
+To use this library, you must do 3 easy things:
+1. [Set up your HTML](##setting-up-your-html)
+2. [Import the script](##-importing-the-script)
+3. [Set the viewer size](##-setting-the-size-of-the-STL-viewer)
+
 ## Setting up your HTML
 To use this library, in your HTML, you will need to create a "placeholder" `<div>` for each STL viewer that you want to render. The placeholder should look like this:
 ```HTML
