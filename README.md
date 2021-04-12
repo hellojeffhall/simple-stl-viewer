@@ -1,6 +1,4 @@
-# Simple STL Viewer
-
-**[Demo: Try it out!](https://simple-stl-viewer-demo.netlify.app)**  (The STL may take a while to load)
+# Simple STL Viewer (**[See a demo here!](https://simple-stl-viewer-demo.netlify.app)**)
 
 This library tries to make it as easy as possible to set up an STL viewer on your website. You don't need to know how to use JavaScript to use this library; if you know a little HTML (or know how to copy/paste it) then you can use this library.
 
