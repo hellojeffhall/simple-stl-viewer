@@ -1,5 +1,5 @@
 const path = require("path")
-
+const { version } = require('./package.json');
 module.exports = {
 	entry : ["@babel/polyfill", "./src/main.js"],
 	mode: "production",
@@ -16,6 +16,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/dist/',
-    filename: 'simple-stl-viewer.min.js',
+    filename: `simple-stl-viewer.${version}.min.js`,
   }
 }
