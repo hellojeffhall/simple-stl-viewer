@@ -2,9 +2,17 @@ import * as THREE from 'three';
 const OrbitControls = require("three-orbit-controls")(THREE)
 const STLLoader = require("three-stl-loader")(THREE)
 
+const degreeToRadian = deg => (2*Math.PI*deg)/360
+
 function transformIntoStlViewer(el){
-	const modelUrl = el.getAttribute("data-stl-url")
-	const color = new THREE.Color(el.getAttribute("color") || 0xbbbdbf)
+	const getAttr = attr => el.getAttribute(attr)
+	const modelUrl = getAttr("data-stl-url")
+	const color = new THREE.Color(getAttr("data-color") || 0xbbbdbf)
+	const initialOffsets = [
+		(Number(getAttr("data-angle-offset-x")) || -90),
+		(Number(getAttr("data-angle-offset-y")) || 0),
+		(Number(getAttr("data-angle-offset-z")) || 0),
+	].map(degreeToRadian);
 	const { clientWidth, clientHeight } = el;
 	const camera = new THREE.PerspectiveCamera(70, clientWidth/clientHeight, 1, 1000)
 	const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -45,7 +53,8 @@ function transformIntoStlViewer(el){
 		mesh.geometry.applyMatrix(new THREE.Matrix4().makeTranslation(
 			-middle.x, -middle.y, -middle.z
 		));
-		mesh.rotation.set(- Math.PI / 2, 0,  0);
+		// mesh.rotation.set(-Math.PI/4, 0,  0);
+		mesh.rotation.set(...initialOffsets);
 
 		const largestDimension = Math.max(
 			geometry.boundingBox.max.x,

@@ -1,1 +1,4 @@
 node_modules
+examples/assets/test*.stl
+examples/localindex.html
+.DS_Store
