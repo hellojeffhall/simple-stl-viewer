@@ -18,16 +18,21 @@ To use this library, in your HTML, you will need to create a "placeholder" `<div
 ```HTML
 <div data-stl-url='path/to/your/file.stl'></div>
 ```
-If you want to specify a hex color for your STL object, you can do so with the `color` property.
+If you want to specify a hex color for your STL object, you can do so with the `data-color` property.
 ```HTML
-<div color="#5A7A7C" data-stl-url='path/to/your/file.stl'></div>
+<div data-color="#5A7A7C" data-stl-url='path/to/your/file.stl'></div>
 ```
 (Make sure your hex color starts with a `#`!)
+
+If you want to specify an angular offset for the intial view of the STL file, you may do so using the following properties:
+- `data-angle-offset-x`
+- `data-angle-offset-y`
+- `data-angle-offset-z`
 
 ## Importing the script
 Then, anywhere **below** all your STL viewier placeholder divs, you should add the script tag that loads this library. When the library loads, it will transform your placeholders into STL viewers.
 ```HTML
-<script src="https://cdn.jsdelivr.net/gh/hellojeffhall/simple-stl-viewer@main/dist/simple-stl-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hellojeffhall/simple-stl-viewer@main/dist/simple-stl-viewer.1.0.1.min.js"></script>
 ```
 (**NOTE** that in production, you probably want to self host this JavaScript file since it could change in the future.)
 
